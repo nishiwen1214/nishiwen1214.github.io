@@ -1,167 +1,78 @@
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-
-  <title>Shiwen Ni (倪仕文)'s Homepage</title>
-
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="description" content="Shiwen Ni (倪仕文), Associate Professor at the Artificial Intelligence Research Institute, Shenzhen University of Advanced Technology. 深圳理工大学人工智能研究院倪仕文特聘副教授个人主页。">
-  <meta name="keywords" content="Shiwen Ni, 倪仕文, nishiwen, shiwen, ni, Deep Learning, nlp, AI">
-  <meta name="author" content="Shiwen Ni" />
-
-  <link rel="stylesheet" href="w3.css">
-
-  <style>
-  .w3-sidebar a {font-family: "Roboto", sans-serif}
-  body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
-  html {scroll-behavior: smooth;}
-  .group-subtitle {
-      margin: 30px 0 18px;
-      padding-bottom: 8px;
-      color: #741172;
-      border-bottom: 2px solid #9bd482;
-  }
-  .member-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
-  }
-  .member-card {
-      overflow: hidden;
-      background: #fff;
-      border-radius: 9px;
-      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.09);
-      transition: transform .2s ease, box-shadow .2s ease;
-  }
-  .member-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.13);
-  }
-  .member-photo {
-      width: 150px;
-      height: 180px;
-      margin: 16px auto 0;
-      background-image: url("images/suat-nlp-members-original.png");
-      background-size: 2059.5px 622.5px;
-      background-repeat: no-repeat;
-      background-color: #fff;
-  }
-  .member-info {
-      min-height: 124px;
-      padding: 14px 14px 18px;
-      text-align: center;
-      border-top: 5px solid #398f1c;
-  }
-  .member-card.postdoc .member-info {border-top-color: #9565bd;}
-  .member-info h3 {margin: 0 0 7px;font-size: 20px;color: #2e2e2e;}
-  .member-info p {margin: 4px 0;line-height: 1.45;color: #555;}
-  .member-role {font-weight: 700;color: #398f1c !important;}
-  .member-card.postdoc .member-role {color: #8752ae !important;}
-  @media (max-width: 900px) {
-      .member-grid {grid-template-columns: repeat(2, minmax(0, 1fr));}
-  }
-  @media (max-width: 600px) {
-      .member-grid {grid-template-columns: 1fr;}
-      .member-card {max-width: 340px;width: 100%;margin: 0 auto;}
-  }
-/* 定义红色文本类 */
-        .text-red {
-            color: #ff0000;
-        }
-        /* 定义蓝色文本类 */
-        .text-blue {
-            color: #00008B;
-        }
-        /* 定义半透明紫色文本类 */
-        .text-purple-transparent {
-            color: rgba(128, 0, 128, 0.7);
-        }
-  </style>
-
+  <meta name="description" content="倪仕文｜深圳理工大学人工智能研究院特聘副教授。Shiwen Ni, Associate Professor at the Artificial Intelligence Research Institute, Shenzhen University of Advanced Technology.">
+  <meta name="keywords" content="Shiwen Ni, 倪仕文, SUAT-NLP, Natural Language Processing, Large Language Models, AI for Science">
+  <meta name="author" content="Shiwen Ni">
+  <title>倪仕文 Shiwen Ni · Academic Homepage</title>
   <link rel="icon" type="image/png" href="images/icons.png">
-  <!--
-  <script src="jquery.min.js"></script>
-  <script>
-  $(document).ready(function(){
-    // Add smooth scrolling to all links
-    $("a").on('click', function(event) {
-      // Make sure this.hash has a value before overriding default behavior
-      if (this.hash !== "") {
-        // Prevent default anchor click behavior
-        event.preventDefault();
-        // Store hash
-        var hash = this.hash;
-        // Using jQuery's animate() method to add smooth page scroll
-        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-        $('html, body').animate({
-          scrollTop: $(hash).offset().top
-        }, 800, function(){
-          // Add hash (#) to URL when done scrolling (default click behavior)
-          window.location.hash = hash;
-        });
-      } // End if
-    });
-  });
-  </script>
-  //-->
-
+  <link rel="stylesheet" href="site.css?v=20261007">
 </head>
+<body>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="#home" aria-label="倪仕文主页 / Shiwen Ni Home"><span class="brand-mark">NSW</span><span>Shiwen Ni <span lang="zh-CN">倪仕文</span></span></a>
+      <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="打开导航菜单">☰</button>
+      <nav class="site-nav" id="site-nav" aria-label="主导航 / Main navigation">
+        <a href="#home">首页 / Home</a>
+        <a href="#about">简介 / About</a>
+        <a href="#group">课题组 / Group</a>
+        <a href="#service">服务 / Service</a>
+        <a href="#publication">论文 / Publications</a>
+      </nav>
+    </div>
+  </header>
 
+  <main>
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div>
+          <span class="eyebrow">Academic Profile · SUAT</span>
+          <h1 id="hero-title">Shiwen Ni <span lang="zh-CN">倪仕文</span></h1>
+          <p class="hero-role">特聘副教授 / Associate Professor</p>
+          <p class="hero-affiliation">深圳理工大学 · 人工智能研究院<br>Artificial Intelligence Research Institute · Shenzhen University of Advanced Technology</p>
+          <ul class="research-tags" aria-label="研究方向 / Research interests">
+            <li>Natural Language Processing</li><li>Large Language Models</li><li>Multimodal AI</li><li>AI for Science</li>
+          </ul>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#publication">查看论文 / Publications</a>
+            <a class="button button-outline" href="https://scholar.google.com/citations?user=ln4hmCwAAAAJ&hl=zh-CN&oi=ao/">Google Scholar ↗</a>
+            <a class="button button-outline" href="mailto:nishiwen@suat-sz.edu.cn">联系我 / Contact ↗</a>
+          </div>
+        </div>
+        <div class="portrait-wrap">
+          <img src="images/02f5bfae704639ef2293adecfb6a831.jpg" alt="倪仕文 / Shiwen Ni" width="250" height="313">
+          <span class="portrait-caption">Research · Collaboration · Discovery</span>
+        </div>
+      </div>
+    </section>
 
-<body class="w3-content" style="max-width:1300px">
+    <section class="content-section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-heading"><span class="section-kicker">01 / Profile</span><h2 id="about-title">个人简介 / About</h2></div>
+        <div class="about-grid">
+          <article class="about-panel" lang="zh-CN">
+            <h3>中文简介</h3>
+            <p>我现任<a href="https://www.suat-sz.edu.cn">深圳理工大学</a>人工智能研究院特聘副教授。此前曾在<a href="https://szs.siat.ac.cn/#/nav?item=%5Bobject%20Object%5D&list=%5Bobject%20Object%5D">先进计算与数字工程研究所</a>、<a href="https://www.siat.ac.cn/">中国科学院深圳先进技术研究院</a>担任助理研究员、博士后。我于<a href="https://www.ncku.edu.tw">国立成功大学</a><a href="https://www.csie.ncku.edu.tw/zh-hant/ncku_csie/">计算机科学与信息工程系</a>获得博士学位。2023 年获选斐陶斐荣誉学会荣誉会员，获台湾资讯学会博士论文奖优等奖，并入选深圳先进院院长优秀博士后专项计划；2024 年入选国家级人才计划，并获评“深圳先进院十佳优秀博士后”；2025 年获评“深圳市优秀博士后”。研究方向包括深度学习、自然语言处理、大语言模型与 AI for Science。</p>
+          </article>
+          <article class="about-panel" lang="en">
+            <h3>English Profile</h3>
+            <p>I am an Associate Professor at the Artificial Intelligence Research Institute, <a href="https://www.suat-sz.edu.cn">Shenzhen University of Advanced Technology</a>. I was previously an Assistant Professor/Postdoc at the <a href="https://szs.siat.ac.cn/#/nav?item=%5Bobject%20Object%5D&list=%5Bobject%20Object%5D">Institute of Advanced Computing and Digital Engineering</a>, <a href="https://www.siat.ac.cn/">Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences</a>. I received my Ph.D. from the <a href="https://www.csie.ncku.edu.tw/zh-hant/ncku_csie/">Department of Computer Science and Information Engineering</a>, <a href="https://www.ncku.edu.tw">National Cheng Kung University</a>. In 2023, I was selected as an honorary member of the Phi Tau Phi Scholastic Honor Society, received the IICM Ph.D. Dissertation Award – Outstanding, and joined SIAT's Dean's Postdoctoral Merit Special Programme. In 2024, I was selected for a National Level Talent Programme and named one of SIAT's Top 10 Outstanding Postdocs. In 2025, I received the Shenzhen Excellent Postdoctoral Fellow award. My research interests include deep learning, natural language processing, large language models, and AI for Science.</p>
+          </article>
+        </div>
+        <div class="contact-strip">
+          <p><strong>欢迎科研与项目合作 / Open to collaboration</strong>完整论文与引用数据见 Google Scholar。 / Full publication list and citations are available on Google Scholar.</p>
+          <div class="contact-links"><a href="mailto:nishiwen@suat-sz.edu.cn">nishiwen@suat-sz.edu.cn</a><a href="mailto:sw.ni@siat.ac.cn">sw.ni@siat.ac.cn</a></div>
+        </div>
+      </div>
+    </section>
 
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-bar-black w3-black w3-collapse w3-top w3-right" style="z-index:1;width:150px" id="mySidebar">
-  <div class="w3-container w3-display-container w3-padding-16">
-    <h3><b>NSW</b></h3>
-  </div>
-  <div class="w3-padding-64 w3-text-light-grey w3-large" style="font-weight:bold">
-    <a href="#home" class="w3-bar-item w3-button">首页 / Home</a>
-<!-- 	   <a href="#Work" class="w3-bar-item w3-button">Work</a> -->
-<!-- 	  <a href="#Education" class="w3-bar-item w3-button">Education</a> -->
-	<a href="#service" class="w3-bar-item w3-button">服务 / Service</a>
-    <a href="#group" class="w3-bar-item w3-button">课题组 / Group</a>
-    <a href="#publication" class="w3-bar-item w3-button">论文 / Publications</a>
-<!--    <a href="#project" class="w3-bar-item w3-button">Project</a> -->
-  </div>
-</nav>
-
-<!-- Top menu on small screens -->
-<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
-  <div class="w3-bar-item w3-padding-24">Shiwen Ni</div>
-  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right"  style="font-stretch: extra-expanded;" onclick="w3_open()"><b>≡</b></a>
-  </div>
-</header>
-
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:150px">
-
-  <!-- Push down content on small screens -->
-  <div class="w3-hide-large" style="margin-top:83px"></div>
-
-<!-- The Home Section -->
-    <div class="w3-container w3-center w3-padding-32" id="home">
-	<h1>Shiwen Ni (倪仕文)</h1>
-      <img style="width: 40%;max-width: 250px" alt="profile photo" src="images/02f5bfae704639ef2293adecfb6a831.jpg">
-        <p class="w3-justify" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:600px">
-          <div class="paragraph" lang="zh-CN"><p>我现任<a href="https://www.suat-sz.edu.cn"><img width="27" src="SUAT.png" alt="深圳理工大学">深圳理工大学</a>人工智能研究院特聘副教授。此前，我曾在<a href="https://szs.siat.ac.cn/#/nav?item=%5Bobject%20Object%5D&list=%5Bobject%20Object%5D">先进计算与数字工程研究所</a>、<a href="https://www.siat.ac.cn/"><img width="25" src="images/siat.png" alt="深圳先进院">中国科学院深圳先进技术研究院</a>担任助理研究员、博士后。我于<a href="https://www.ncku.edu.tw"><img width="25" src="images/ncku.png" alt="成功大学">国立成功大学</a><a href="https://www.csie.ncku.edu.tw/zh-hant/ncku_csie/">计算机科学与信息工程系</a>获得博士学位。2023 年获选斐陶斐荣誉学会荣誉会员，获台湾资讯学会博士论文奖优等奖，并入选深圳先进院院长优秀博士后专项计划；2024 年入选国家级人才计划，并获评“深圳先进院十佳优秀博士后”；2025 年获评“深圳市优秀博士后”。</p></div>
-          <div class="paragraph"><p>I am now an Associate Professor at the Artificial Intelligence Research Institute, <a href="https://www.suat-sz.edu.cn"><img width="27" src="SUAT.png" alt="SUAT"> Shenzhen University of Advanced Technology</a>. I was previously an Assistant Professor/Postdoc at the <a href="https://szs.siat.ac.cn/#/nav?item=%5Bobject%20Object%5D&list=%5Bobject%20Object%5D">Institute of Advanced Computing and Digital Engineering</a>, <a href="https://www.siat.ac.cn/"><img width="25" src="images/siat.png" alt="SIAT"> Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences</a>. 
-		  I received my Ph.D. degree from <a href="https://www.csie.ncku.edu.tw/zh-hant/ncku_csie/">Department of Computer Science and Information Engineering</a>, <a href="https://www.ncku.edu.tw"><img width="25" src="images/ncku.png" alt="NCKU"> National Cheng Kung University</a>. I was selected as an honorary member of the <a href="http://www.phitauphi.org.tw/">Phi Tau Phi Scholastic Honor Society</a> in 2023. I received the <a href="http://www.iicm.org.tw/index.html">Institute of Information & Computing Machinery (IICM)</a> Ph.D.Dissertation Award -Outstanding in 2023. I was selected for SIAT's Dean's Postdoctoral Merit Special Programme in 2023. I was selected for the National Level Talent Programme of China in 2024. I was awarded the ‘SIAT Top-10 Outstanding Postdocs’ award for the year 2024. I was awarded the ‘Shenzhen Excellent Postdoctoral Fellow’ in 2025.</p></div>
-		<div class="paragraph"><p lang="zh-CN">我的研究方向包括但不限于<strong>深度学习</strong>、<strong>自然语言处理</strong>、<strong>大语言模型</strong>与 <strong>AI for Science</strong>。</p><p lang="en">My research interests include, but are not limited to, <strong>Deep Learning</strong>, <strong>Natural Language Processing</strong>, <strong>Large Language Models</strong>, and <strong>AI for Science</strong>.</p></div>
-		<div class="paragraph"><p lang="zh-CN">完整论文列表及引用数据请访问我的 <a href="https://scholar.google.com/citations?user=ln4hmCwAAAAJ&hl=zh-CN&oi=ao/">Google Scholar 主页</a>。</p><p lang="en">For a full list of publications and citation counts, please visit my <a href="https://scholar.google.com/citations?user=ln4hmCwAAAAJ&hl=zh-CN&oi=ao/">Google Scholar profile</a>.</p></div>
-		<div class="paragraph"><p lang="zh-CN">欢迎科研与项目合作。联系邮箱：<a>nishiwen@suat-sz.edu.cn；sw.ni@siat.ac.cn</a>。</p><p lang="en">Research and project collaborations are welcome. Email: <a>nishiwen@suat-sz.edu.cn; sw.ni@siat.ac.cn</a>.</p></div>
-	    <div class="paragraph"><p>♥ 欢迎各种科研和项目合作！ / Research and project collaborations are always welcome! ♥</p></div>
-  </div>
-
-
-  <!-- The Research Group Section -->
-  <div class="w3-container w3-light-grey w3-padding-32" id="group">
-    <h2>课题组 / Research Group</h2>
+    <section class="content-section section-alt" id="group" aria-labelledby="group-title">
+      <div class="container">
+        <div class="section-heading"><span class="section-kicker">02 / People</span><h2 id="group-title">课题组 / Research Group</h2></div>
 
     <h3 class="group-subtitle">博士后与科研人员 / Postdoctoral Researchers &amp; Research Staff</h3>
     <div class="member-grid">
@@ -210,43 +121,24 @@
       <article class="member-card"><div class="member-photo" role="img" aria-label="罗衍林" style="background-position:-1665px -439px;"></div><div class="member-info"><h3>罗衍林 / Yanlin Luo</h3><p class="member-role">本科生 / Undergraduate Student</p><p>深圳理工大学<br>Shenzhen University of Advanced Technology</p></div></article>
       <article class="member-card"><div class="member-photo" role="img" aria-label="陈俊宇" style="background-position:-1895px -440px;"></div><div class="member-info"><h3>陈俊宇 / Junyu Chen</h3><p class="member-role">实习生 / Intern</p><p>澳门科技大学<br>Macau University of Science and Technology</p></div></article>
     </div>
-  </div>
+      </div>
+    </section>
 
-	
-    <!-- The Services Section -->
-  <div class="w3-container w3-light-grey w3-padding-32" id="service">
-    <h2>学术服务 / Academic Service</h2>
-     <div class="sectionbody">
-<div class="ulist"><ul>
-<li>
-<p>
-担任 ACL ARR 2024、2025、2026 <strong>领域主席（Area Chair）</strong>。<br>
-<span lang="en"><strong>Area Chair</strong> for ACL ARR 2024, 2025, and 2026.</span>
-</p>
-</li>
-<li>
-<p>
-担任 AAAI 2026、2027，EMNLP 2023，PAKDD 2024，ECML-PKDD 2023、2024、2025，AACIP 2023，AFccT 2023，AICS 2022、2023、2024，以及 CNIOT 2022、2023、2024 的<strong>（技术）程序委员会委员</strong>。<br>
-<span lang="en"><strong>(Technical) Program Committee Member</strong> for AAAI 2026 and 2027, EMNLP 2023, PAKDD 2024, ECML-PKDD 2023–2025, AACIP 2023, AFccT 2023, AICS 2022–2024, and CNIOT 2022–2024.</span>
-</p>
-</li>
-<li>
-<p>
-担任以下期刊与会议的<strong>审稿人</strong>：IEEE/ACM Transactions on Audio, Speech and Language Processing、Information Processing and Management、npj Climate Action、Knowledge-Based Systems、Engineering Applications of Artificial Intelligence、CAAI Transactions on Intelligence Technology、Social Network Analysis and Mining、Multimedia Systems、International Journal of Machine Learning and Cybernetics、Journal of Web Engineering，以及 ACL ARR 2023、2024，COLING 2024、2025，NeurIPS 2023–2025，EMNLP 2023、2024，ICLR 2024、2026，ICASSP 2023、2024，IJCAI 2022、2023，KDD 2022，AAMAS 2022，CIKM 2022，PAKDD 2022，ICTAI 2021 等。<br>
-<span lang="en"><strong>Reviewer</strong> for IEEE/ACM Transactions on Audio, Speech and Language Processing, Information Processing and Management, npj Climate Action, Knowledge-Based Systems, Engineering Applications of Artificial Intelligence, CAAI Transactions on Intelligence Technology, Social Network Analysis and Mining, Multimedia Systems, International Journal of Machine Learning and Cybernetics, Journal of Web Engineering, ACL ARR 2023 and 2024, COLING 2024 and 2025, NeurIPS 2023–2025, EMNLP 2023 and 2024, ICLR 2024 and 2026, ICASSP 2023 and 2024, IJCAI 2022 and 2023, KDD 2022, AAMAS 2022, CIKM 2022, PAKDD 2022, ICTAI 2021, and others.</span>
-</p>
-</li>
-</ul></div>
-  </div>
+    <section class="content-section section-dark" id="service" aria-labelledby="service-title">
+      <div class="container">
+        <div class="section-heading"><span class="section-kicker">03 / Community</span><h2 id="service-title">学术服务 / Academic Service</h2></div>
+        <div class="service-grid">
+          <article class="service-card" data-index="01"><h3>领域主席 / Area Chair</h3><p lang="zh-CN">ACL ARR 2024、2025、2026 领域主席。</p><p lang="en">Area Chair for ACL ARR 2024, 2025, and 2026.</p></article>
+          <article class="service-card" data-index="02"><h3>程序委员会 / Program Committee</h3><p lang="zh-CN">AAAI 2026、2027，EMNLP 2023，PAKDD 2024，ECML-PKDD 2023、2024、2025，AACIP 2023，AFccT 2023，AICS 2022、2023、2024，以及 CNIOT 2022、2023、2024。</p><p lang="en">(Technical) Program Committee Member for AAAI 2026 and 2027, EMNLP 2023, PAKDD 2024, ECML-PKDD 2023–2025, AACIP 2023, AFccT 2023, AICS 2022–2024, and CNIOT 2022–2024.</p></article>
+          <article class="service-card" data-index="03"><h3>审稿 / Reviewing</h3><p lang="zh-CN">担任 IEEE/ACM Transactions on Audio, Speech and Language Processing、Information Processing and Management、npj Climate Action、Knowledge-Based Systems、Engineering Applications of Artificial Intelligence、CAAI Transactions on Intelligence Technology、Social Network Analysis and Mining、Multimedia Systems、International Journal of Machine Learning and Cybernetics、Journal of Web Engineering，以及 ACL ARR 2023、2024，COLING 2024、2025，NeurIPS 2023–2025，EMNLP 2023、2024，ICLR 2024、2026，ICASSP 2023、2024，IJCAI 2022、2023，KDD 2022，AAMAS 2022，CIKM 2022，PAKDD 2022，ICTAI 2021 等期刊与会议的审稿人。</p><p lang="en">Reviewer for IEEE/ACM Transactions on Audio, Speech and Language Processing, Information Processing and Management, npj Climate Action, Knowledge-Based Systems, Engineering Applications of Artificial Intelligence, CAAI Transactions on Intelligence Technology, Social Network Analysis and Mining, Multimedia Systems, International Journal of Machine Learning and Cybernetics, Journal of Web Engineering, ACL ARR 2023 and 2024, COLING 2024 and 2025, NeurIPS 2023–2025, EMNLP 2023 and 2024, ICLR 2024 and 2026, ICASSP 2023 and 2024, IJCAI 2022 and 2023, KDD 2022, AAMAS 2022, CIKM 2022, PAKDD 2022, ICTAI 2021, and others.</p></article>
+        </div>
+      </div>
+    </section>
 
-  </div>
- <!-- The Publications Section -->
-  <div class="w3-container w3-padding-32"" id="publication">
-    <h2>论文发表 / Publications</h2>
-
-    <ol>
-<p>
-</p>
+    <section class="content-section" id="publication" aria-labelledby="publication-title">
+      <div class="container">
+        <div class="section-heading"><span class="section-kicker">04 / Research</span><h2 id="publication-title">论文发表 / Publications</h2><p>完整论文列表及引用数据请访问 <a href="https://scholar.google.com/citations?user=ln4hmCwAAAAJ&hl=zh-CN&oi=ao/">Google Scholar</a>。 / For citations and the full list, visit Google Scholar.</p></div>
+        <ol class="publication-list">
 
 
 
@@ -300,7 +192,6 @@ Shuaimin Li, Chen Jason Zhang, Xuanang  Chen, Anni  Peng, Zhuoyue  Wan, Yuanfeng
 Xinrun Du, Yifan Yao, Kaijing Ma, Bingli Wang, Tianyu Zheng, King Zhu, Minghao Liu, Yiming Liang, Xiaolong Jin, Zhenlin Wei, Chujie Zheng, Kaixin Deng, Shawn Gavin, Shian Jia, Sichao Jiang, Yiyan Liao, Rui Li, Qinrui Li, Sirun Li, Yizhi Li, Yunwen Li, David Ma, Yuansheng Ni, Haoran Que, Qiyao Wang, Zhoufutu Wen, Siwei Wu, Tyshawn Hsing, Ming Xu, Zhenzhu Yang, Zekun Moore Wang, Junting Zhou, Yuelin Bai, Xingyuan Bu, Chenglin Cai, Liang Chen, Yifan Chen, Chengtuo Cheng, Tianhao Cheng, Keyi Ding, Siming Huang, Yun Huang, Yaoru Li, Yizhe Li, Zhaoqun Li, Tianhao Liang, Chengdong Lin, Hongquan Lin, Yinghao Ma, Tianyang Pang, Zhongyuan Peng, Zifan Peng, Qige Qi, Shi Qiu, Xingwei Qu, Shanghaoran Quan, Yizhou Tan, Zili Wang, Chenqing Wang, Hao Wang, Yiya Wang, Yubo Wang, Jiajun Xu, Kexin Yang, Ruibin Yuan, Yuanhao Yue, Tianyang Zhan, Chun Zhang, Jinyang Zhang, Xiyue Zhang, Xingjian Zhang, Yue Zhang, Yongchi Zhao, Xiangyu Zheng, Chenghua Zhong, Yang Gao, Zhoujun Li, Dayiheng Liu, Qian Liu, Tianyu Liu, <strong>Shiwen Ni (Organization Committee Member)</strong>, Junran Peng, Yujia Qin, Wenbo Su, Guoyin Wang, Shi Wang, Jian Yang, Min Yang, Meng Cao, Xiang Yue, Zhaoxiang Zhang, Wangchunshu Zhou, Jiaheng Liu, Qunshu Lin, Wenhao Huang, Ge Zhang, <span class="text-blue"><em>SuperGPQA: Scaling LLM Evaluation across 285 Graduate Disciplines</em></span>, <strong>NeurIPS 2025</strong>. <a href="https://arxiv.org/pdf/2502.14739">[Paper]</a> <a href="https://huggingface.co/datasets/m-a-p/SuperGPQA">[Huggingface]</a> <a href="https://mp.weixin.qq.com/s/3pBXCpUUdCW9LjXyY8RM5g">[量子位]</a> (CCF A)
 </p>
 </li>
-</p>
 <li>
 <p>
 Dingwei Chen, Ziqiang Liu, Feiteng Fang, Chak Tou Leong, <strong>Shiwen Ni</strong>, Ahmadreza Argha, Hamid Alinejad-Rokny, Min Yang†, Chengming Li†. <span class="text-blue"><em>Expanding before Inferring: Enhancing Factuality in Large Language Models through Premature Layers Interpolation</em></span>, <strong>EMNLP 2025</strong>. <a href="https://arxiv.org/pdf/2506.02973">[Paper]</a> (CCF B)
@@ -374,6 +265,7 @@ Jinchang Hou*, Chang Ao*, Haihong Wu, Xiangtao Kong, Zhigang Zheng, Daijia Tang,
 <li>
 <p>
 <strong>Shiwen Ni*</strong>, Dingwei Chen*, Chengming Li†, Xiping Hu, Ruifeng Xu, Min Yang†. <span class="text-blue"><em>Forgetting before Learning: Utilizing Parametric Arithmetic for Knowledge Updating in Large Language Models</em></span>, <strong>ACL 2024</strong>. <a href="https://aclanthology.org/2024.acl-long.310.pdf">[Paper]</a> (CCF A)
+</p>
 </li>
 <li>
 <p>
@@ -435,70 +327,19 @@ Jiawen Li, <strong>Shiwen Ni</strong>, Hung-Yu Kao†. <span class="text-blue"><
 <strong>Shiwen Ni</strong>, Hung-Yu Kao†. <span class="text-blue"><em>PSForest: Improving Deep Forest via Feature Pooling and Error Screening</em></span>, <strong>ACML 2020</strong>. <a href="https://proceedings.mlr.press/v129/ni20a/ni20a.pdf">[Paper]</a> (CCF C)
 </p>
 </li>	
- </ol>
-* 共同第一作者 / Equal contribution&nbsp;&nbsp;&nbsp;&nbsp;† 通讯作者 / Corresponding author
-</p>
-  </div>
+        </ol>
+        <p class="publication-note">* 共同第一作者 / Equal contribution &nbsp;&nbsp; † 通讯作者 / Corresponding author</p>
+      </div>
+    </section>
+  </main>
 
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© Shiwen Ni · Shenzhen University of Advanced Technology</span>
+      <span>网页模板来源 / Original template: <a href="https://www.wangyunhe.site/">Wang Yunhe</a></span>
+    </div>
+  </footer>
 
-    
-						       
-
-  <div class=" w3-center w3-padding-24">
-
-    网页模板来源 / Web page template source: <a href="https://www.wangyunhe.site/">&#10025;</a></br>
-
-  <!-- Default Statcounter code for Yunhe Wang's Homepage
-  https://www.wangyunhe.site -->
-  No.
-  <script type="text/javascript">
-  var sc_project=12347113; 
-  var sc_invisible=0; 
-  var sc_security="21aca5d1"; 
-  var sc_https=1; 
-  var scJsHost = "https://";
-  document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+
-  "statcounter.com/counter/counter.js'></"+"script>");
-  </script> Visitor Since Feb 2022. Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a>
-  <noscript>
-    <div class="statcounter"><a title="Web Analytics Made Easy -
-  StatCounter" href="https://statcounter.com/" target="_blank"><img
-  class="statcounter" src="https://c.statcounter.com/12347113/0/21aca5d1/0/"
-  alt="Web Analytics Made Easy - StatCounter"></a></div>
-  </noscript>
-  <!-- End of Statcounter Code -->
-
-  </div>
-
-  <!-- End page content -->
-</div>
-
-<script>
-// Accordion 
-function myAccFunc() {
-  var x = document.getElementById("demoAcc");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else {
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-
-// Click on the "Jeans" link on page load to open the accordion for demo purposes
-document.getElementById("myBtn").click();
-
-
-// Open and close sidebar
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
-}
-</script>
-
+  <script src="site.js?v=20261007" defer></script>
 </body>
 </html>
