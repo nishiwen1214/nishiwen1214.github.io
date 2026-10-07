@@ -91,6 +91,14 @@ img { max-width: 100%; }
 .contact-links a { display: inline-flex; align-items: center; min-height: 38px; padding: 7px 13px; border: 1px solid #b8d7df; border-radius: 8px; background: rgba(255,255,255,.7); color: #255176; font-size: 13px; font-weight: 650; }
 .contact-links a:hover { background: white; }
 
+.honors-timeline { display: grid; gap: 18px; }
+.honor-year-group { display: grid; grid-template-columns: 100px minmax(0, 1fr); gap: 24px; align-items: start; }
+.honor-year-group h3 { position: sticky; top: 94px; margin: 0; padding-top: 14px; color: #596baa; font: 750 24px ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: -.04em; }
+.honor-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 0; padding: 0; list-style: none; }
+.honor-list li { position: relative; min-width: 0; padding: 17px 18px 16px 21px; border: 1px solid #dce5f0; border-left: 3px solid #8c75c1; border-radius: 9px; background: #fff; box-shadow: 0 8px 20px rgba(25, 40, 75, .025); }
+.honor-list li span { display: block; color: #20304b; font-size: 14px; font-weight: 700; line-height: 1.55; }
+.honor-list li small { display: block; margin-top: 6px; color: #68788d; font-size: 12px; line-height: 1.5; }
+
 .group-subtitle { display: flex; align-items: center; gap: 14px; margin: 42px 0 18px; color: #27395b; font-size: 18px; line-height: 1.5; }
 .group-subtitle::before { content: ""; width: 3px; height: 21px; border-radius: 9px; background: linear-gradient(var(--cyan), var(--violet)); }
 .member-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
@@ -131,6 +139,7 @@ img { max-width: 100%; }
 .site-footer a { color: #b9dce7; }
 
 @media (max-width: 1000px) {
+  .site-nav a { padding-inline: 10px; }
   .member-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .service-grid { grid-template-columns: 1fr; }
 }
@@ -146,6 +155,8 @@ img { max-width: 100%; }
   .portrait-wrap img { aspect-ratio: 1; object-position: center 15%; }
   .portrait-caption { display: none; }
   .about-grid { grid-template-columns: 1fr; }
+  .honor-year-group { grid-template-columns: 1fr; gap: 8px; }
+  .honor-year-group h3 { position: static; padding-top: 0; }
   .member-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .content-section { padding: 64px 0; }
 }
@@ -154,6 +165,7 @@ img { max-width: 100%; }
   .hero h1 { font-size: 42px; }
   .hero h1 span { display: block; margin-top: 8px; font-size: .55em; vertical-align: baseline; }
   .about-panel { padding: 24px; }
+  .honor-list { grid-template-columns: 1fr; }
   .contact-strip { align-items: flex-start; flex-direction: column; padding: 23px; }
   .member-grid { grid-template-columns: 1fr; }
   .member-card { max-width: 390px; width: 100%; margin: 0 auto; }
