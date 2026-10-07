@@ -84,6 +84,17 @@ img { max-width: 100%; }
 .about-panel h3::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 0 5px rgba(75, 201, 216, .13); }
 .about-panel p { margin: 0; color: #3d4a5b; font-size: 14.5px; line-height: 1.9; }
 .about-panel a { text-decoration: underline; text-decoration-color: #b6c8df; text-underline-offset: 3px; }
+.focus-block { margin-top: 24px; padding: 32px; border: 1px solid #dce6f0; border-radius: var(--radius); background: #f8fbfe; }
+.focus-intro h3 { margin: 0 0 12px; color: #213451; font-size: 20px; }
+.focus-intro p { margin: 0 0 7px; color: #43546c; font-size: 14px; line-height: 1.8; }
+.focus-intro p[lang="en"] { color: #66778a; font-size: 13px; }
+.focus-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 24px; }
+.focus-card { padding: 23px; border: 1px solid #d9e5ef; border-radius: 12px; background: #fff; }
+.focus-index { color: #6e62a1; font: 700 11px ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .08em; }
+.focus-card h4 { margin: 9px 0 11px; color: #203655; font-size: 17px; }
+.focus-card p { margin: 0 0 8px; color: #465973; font-size: 13.5px; line-height: 1.75; }
+.focus-card p:last-child { margin-bottom: 0; }
+.focus-card p[lang="en"] { color: #6a7b90; font-size: 12.5px; }
 .contact-strip { display: flex; align-items: center; justify-content: space-between; gap: 25px; margin-top: 24px; padding: 25px 30px; border-radius: 14px; background: #e8f4f7; border: 1px solid #d0e8ef; }
 .contact-strip p { margin: 0; color: #344759; font-size: 14px; }
 .contact-strip strong { display: block; color: #173451; font-size: 17px; }
@@ -169,6 +180,7 @@ img { max-width: 100%; }
   .portrait-wrap img { aspect-ratio: 1; object-position: center 15%; }
   .portrait-caption { display: none; }
   .about-grid { grid-template-columns: 1fr; }
+  .focus-grid { grid-template-columns: 1fr; }
   .project-grid { grid-template-columns: 1fr; }
   .honor-year-group { grid-template-columns: 1fr; gap: 8px; }
   .honor-year-group h3 { position: static; padding-top: 0; }
@@ -180,6 +192,7 @@ img { max-width: 100%; }
   .hero h1 { font-size: 42px; }
   .hero h1 span { display: block; margin-top: 8px; font-size: .55em; vertical-align: baseline; }
   .about-panel { padding: 24px; }
+  .focus-block { padding: 23px; }
   .honor-list { grid-template-columns: 1fr; }
   .contact-strip { align-items: flex-start; flex-direction: column; padding: 23px; }
   .member-grid { grid-template-columns: 1fr; }
