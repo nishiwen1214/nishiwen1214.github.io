@@ -99,6 +99,19 @@ img { max-width: 100%; }
 .honor-list li span { display: block; color: #20304b; font-size: 14px; font-weight: 700; line-height: 1.55; }
 .honor-list li small { display: block; margin-top: 6px; color: #68788d; font-size: 12px; line-height: 1.5; }
 
+.project-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 15px; margin: 0 0 17px; padding-bottom: 11px; border-bottom: 1px solid var(--line); }
+.project-heading-completed { margin-top: 42px; }
+.project-heading h3 { margin: 0; color: #243755; font-size: 19px; }
+.project-heading > span { color: #687c92; font-size: 12px; font-weight: 650; white-space: nowrap; }
+.project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; }
+.project-card { position: relative; min-width: 0; padding: 24px 26px; border: 1px solid #dce5ef; border-radius: 12px; background: #fff; box-shadow: 0 12px 32px rgba(20, 36, 68, .035); }
+.project-card::before { content: ""; position: absolute; top: 24px; left: 0; width: 3px; height: 33px; background: linear-gradient(var(--cyan), var(--violet)); }
+.project-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 13px; color: #6573a1; font: 700 11px ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .04em; }
+.project-meta span + span::before { content: "·"; padding-right: 8px; color: #9da9b8; }
+.project-card h4 { margin: 0; color: #213451; font-size: 15px; line-height: 1.55; }
+.project-card p { margin: 8px 0 0; color: #66778b; font-size: 12.5px; line-height: 1.65; }
+.project-card .project-title { color: #344b6a; font-size: 14px; font-weight: 650; }
+
 .group-subtitle { display: flex; align-items: center; gap: 14px; margin: 42px 0 18px; color: #27395b; font-size: 18px; line-height: 1.5; }
 .group-subtitle::before { content: ""; width: 3px; height: 21px; border-radius: 9px; background: linear-gradient(var(--cyan), var(--violet)); }
 .member-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
@@ -155,6 +168,7 @@ img { max-width: 100%; }
   .portrait-wrap img { aspect-ratio: 1; object-position: center 15%; }
   .portrait-caption { display: none; }
   .about-grid { grid-template-columns: 1fr; }
+  .project-grid { grid-template-columns: 1fr; }
   .honor-year-group { grid-template-columns: 1fr; gap: 8px; }
   .honor-year-group h3 { position: static; padding-top: 0; }
   .member-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
