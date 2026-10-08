@@ -18,6 +18,7 @@ a { color: var(--plum-deep); text-decoration: none; }
 a:hover { color: #a12e9d; }
 a:focus-visible, button:focus-visible { outline: 3px solid #ba8cbd; outline-offset: 3px; }
 img { max-width: 100%; }
+.logo-clips { position: absolute; pointer-events: none; }
 
 .site-header { position: sticky; z-index: 50; top: 0; border-bottom: 1px solid var(--line); background: rgba(255,255,255,.96); backdrop-filter: blur(12px); }
 .nav-shell { width: min(1260px, calc(100% - 48px)); min-height: 74px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
@@ -310,6 +311,9 @@ main { counter-reset: research-section; }
   .hero::after { width: 100%; height: 350px; opacity: .21; }
   .content-section::before { width: 180px; opacity: .09; }
 }
+
+.brand-logo, .group-heading img { clip-path: url(#nlp-mark-outline); background: transparent; border: 0; border-radius: 0; padding: 0; }
+.hero-affiliation img { clip-path: url(#suat-mark-outline); background: transparent; border: 0; border-radius: 0; padding: 0; }
 
 @media (max-width: 1100px) {
   .menu-toggle { display: block; }
