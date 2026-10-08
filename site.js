@@ -31,9 +31,73 @@ const secretCat = document.querySelector('.mascot-note');
 if (secretCat) {
   let escapeAnimation;
   let hops = 0;
+  let audioContext;
+  let lastMeow = -Infinity;
+  let replyTimer;
+  let lastReply = -1;
+  const catReplies = ['喵～', '你点到本喵啦。', '摸摸可以，罐罐呢？', '抓不到我吧 ฅ', '本喵正在思考，勿扰……再摸一下也行。', '论文你写，觉我替你睡。'];
+  const bubble = document.createElement('div');
+  bubble.className = 'cat-whisper';
+  bubble.setAttribute('role', 'status');
+  bubble.setAttribute('aria-live', 'polite');
+  bubble.hidden = true;
+  document.body.appendChild(bubble);
+  const hideReply = () => { clearTimeout(replyTimer); bubble.hidden = true; bubble.textContent = ''; };
+  const meow = async () => {
+    const AudioEngine = window.AudioContext || window.webkitAudioContext;
+    if (!AudioEngine || performance.now() - lastMeow < 900) return;
+    lastMeow = performance.now();
+    try {
+      // A quiet, short electronic meow, created only after a deliberate click.
+      audioContext ||= new AudioEngine();
+      if (audioContext.state === 'suspended') await audioContext.resume();
+      if (audioContext.state !== 'running') return;
+      const now = audioContext.currentTime;
+      const voice = audioContext.createOscillator();
+      const vowel = audioContext.createBiquadFilter();
+      const volume = audioContext.createGain();
+      voice.type = 'sawtooth';
+      voice.frequency.setValueAtTime(620, now);
+      voice.frequency.exponentialRampToValueAtTime(890, now + .12);
+      voice.frequency.exponentialRampToValueAtTime(430, now + .52);
+      vowel.type = 'bandpass';
+      vowel.Q.value = 1.8;
+      vowel.frequency.setValueAtTime(1600, now);
+      vowel.frequency.exponentialRampToValueAtTime(700, now + .52);
+      volume.gain.setValueAtTime(0, now);
+      volume.gain.linearRampToValueAtTime(.055, now + .045);
+      volume.gain.linearRampToValueAtTime(.035, now + .25);
+      volume.gain.exponentialRampToValueAtTime(.001, now + .56);
+      voice.connect(vowel).connect(volume).connect(audioContext.destination);
+      voice.start(now);
+      voice.stop(now + .58);
+      voice.onended = () => { voice.disconnect(); vowel.disconnect(); volume.disconnect(); };
+    } catch { /* Silent browsers still get the visual reply. */ }
+  };
   const stopEscape = () => escapeAnimation?.cancel();
+  const showReply = text => {
+    clearTimeout(replyTimer);
+    bubble.textContent = text;
+    bubble.hidden = false;
+    const anchor = secretCat.getBoundingClientRect();
+    const bubbleWidth = bubble.getBoundingClientRect().width;
+    bubble.style.left = `${Math.max(12, Math.min(anchor.left + anchor.width / 2 - bubbleWidth / 2, document.documentElement.clientWidth - bubbleWidth - 12))}px`;
+    bubble.style.top = `${Math.max(84, anchor.top - bubble.offsetHeight - 14)}px`;
+    replyTimer = setTimeout(hideReply, 2800);
+  };
+  secretCat.addEventListener('pointerenter', event => {
+    if (event.pointerType === 'touch') return;
+    showReply('喵～');
+    if (audioContext?.state === 'running') void meow();
+  });
+  secretCat.addEventListener('focus', () => showReply('喵～'));
   secretCat.addEventListener('click', event => {
     stopEscape();
+    let reply = Math.floor(Math.random() * catReplies.length);
+    if (reply === lastReply) reply = (reply + 1) % catReplies.length;
+    lastReply = reply;
+    showReply(catReplies[reply]);
+    void meow();
     if (reducedMotion.matches) return;
     const bounds = secretCat.getBoundingClientRect();
     const direction = ++hops % 2 ? 1 : -1;
@@ -50,6 +114,9 @@ if (secretCat) {
     ], { duration: 1250, easing: 'ease-in-out' });
   });
   window.addEventListener('resize', stopEscape);
+  window.addEventListener('resize', hideReply);
+  window.addEventListener('scroll', hideReply, { passive: true });
+  document.addEventListener('keydown', event => { if (event.key === 'Escape') hideReply(); });
   reducedMotion.addEventListener('change', stopEscape);
 }
 if (petButton && petReply) {

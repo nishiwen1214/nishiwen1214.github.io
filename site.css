@@ -183,6 +183,8 @@ img { max-width: 100%; }
 .button-outline:hover { background: #213952; color: #fff; border-color: #80d7e7; }
 .mascot-note { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 44px; width: 44px; height: 44px; padding: 6px; border: 0; background: transparent; cursor: pointer; touch-action: manipulation; position: relative; z-index: 3; }
 .mascot-note:focus-visible { outline: 2px solid #91d6ed; outline-offset: 3px; border-radius: 50%; }
+.cat-whisper { position: fixed; z-index: 60; max-width: min(240px, calc(100vw - 24px)); padding: 9px 13px; border: 1px solid #8399c9; border-radius: 12px 12px 12px 3px; background: #192840; color: #eaf0ff; box-shadow: 0 5px 22px #03091655; font-size: 13px; line-height: 1.6; pointer-events: none; }
+.cat-whisper[hidden] { display: none; }
 .mascot-note:hover { color: #e9faff; }
 .mascot-note img { width: 32px; height: 32px; object-fit: cover; object-position: center 24%; border: 1px solid #8b9bb1; border-radius: 50%; }
 .portrait-wrap { position: relative; padding: 9px 9px 12px; background: #152338; border: 1px solid #4b5d79; border-radius: 3px; box-shadow: 0 12px 36px #030b1640; transform: none; }
