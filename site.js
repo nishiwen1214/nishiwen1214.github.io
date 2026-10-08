@@ -24,6 +24,19 @@ document.addEventListener('keydown', (event) => {
 const sections = [...document.querySelectorAll('main section[id]')];
 const navLinks = [...navigation.querySelectorAll('a')];
 
+const petButton = document.querySelector('.pet-button');
+const petReply = document.querySelector('.pet-reply');
+if (petButton && petReply) {
+  const replies = ['喵，收到你的摸摸啦。', '伸个懒腰，再想一个好问题。', '今天也要保持好奇心。', '论文可以慢慢读，猫可以再摸一下。'];
+  let petCount = 0;
+  petButton.hidden = false;
+  petButton.addEventListener('click', () => {
+    petReply.textContent = replies[petCount % replies.length];
+    petCount += 1;
+    petButton.textContent = petCount % 2 ? '再摸一下 ♡' : '摸摸舒芙蕾 ♡';
+  });
+}
+
 document.querySelectorAll('.publication-list > li').forEach((item) => {
   const paragraph = item.querySelector('p');
   const title = paragraph?.querySelector('.text-blue');
