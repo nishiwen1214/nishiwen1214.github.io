@@ -1,13 +1,13 @@
 :root {
-  color-scheme: light;
-  --ink: #25334b;
-  --muted: #655f69;
-  --plum: #7b1682;
-  --plum-deep: #5e1266;
-  --line: #dbe1ec;
-  --paper: #ffffff;
-  --wash: #f5f7fb;
-  --wash-deep: #edf2f8;
+  color-scheme: dark;
+  --ink: #e5edf9;
+  --muted: #aabbd2;
+  --plum: #b3aaff;
+  --plum-deep: #94dfed;
+  --line: #2d405b;
+  --paper: #0b1424;
+  --wash: #0e192c;
+  --wash-deep: #101b30;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "PingFang SC", sans-serif;
 }
 
@@ -236,6 +236,79 @@ img { max-width: 100%; }
 @media (hover: hover) {
   .member-card:hover { border-color: #879bc1; box-shadow: 0 5px 20px #20396412; }
   .publication-list > li:hover { background: #f3f6fc; }
+}
+
+/* One continuous neural-field visual system, from profile to publications. */
+body { background-image: linear-gradient(#6386b007 1px, transparent 1px), linear-gradient(90deg, #6386b007 1px, transparent 1px); background-size: 48px 48px; }
+a:hover { color: #c3f4ff; }
+a:focus-visible, button:focus-visible { outline-color: #86dfef; }
+.hero { isolation: isolate; }
+.hero::after { content: ""; position: absolute; z-index: -1; inset: 0 0 auto auto; width: min(850px, 75%); height: 600px; background: url("images/neural-field.svg") center / contain no-repeat; opacity: .38; pointer-events: none; }
+.hero h1 { text-shadow: 0 0 38px #92a7ff18; }
+.hero-greeting::before { content: ""; width: 5px; height: 5px; background: #8ae3ed; box-shadow: 0 0 12px #71e7ff; flex: none; }
+.portrait-wrap { box-shadow: 0 0 40px #6c7dcc14, 0 12px 36px #030b1640; }
+.button-primary { background: linear-gradient(120deg, #575eae, #735db7); box-shadow: 0 0 22px #7771d32b; }
+.hero-overview { border: 1px solid #38506b; border-bottom: 0; background: #0c192cee; }
+.content-section { position: relative; isolation: isolate; border-bottom: 1px solid #23354f; background-color: #0b1424; background-image: linear-gradient(90deg, #6584a906 1px, transparent 1px); background-size: 48px 48px; }
+.section-alt { background-color: #0e192b; }
+.section-dark { background-color: #0d192a; }
+.content-section::before { content: ""; position: absolute; top: 35px; right: 2%; width: 260px; height: 200px; background: url("images/neural-field.svg") center / contain no-repeat; opacity: .13; z-index: -1; pointer-events: none; }
+main { counter-reset: research-section; }
+.content-section { counter-increment: research-section; }
+.section-kicker { color: #86c9dd; font-size: 10px; letter-spacing: .16em; }
+.section-kicker::before { content: counter(research-section, decimal-leading-zero) " / "; color: #8791c3; }
+.section-heading { position: relative; }
+.section-heading h2 { color: #edf3ff; }
+.section-heading::after { content: ""; display: block; width: 100px; height: 2px; margin-top: 19px; background: linear-gradient(90deg, #9786eb, #72cfdf 65%, transparent); box-shadow: 0 0 12px #77b7ef25; }
+.section-heading p { color: #aebdd2; }
+.about-story { max-width: 1040px; border-top: 0; }
+.profile-pair { border-color: #2a3b55; }
+.profile-pair p[lang="zh-CN"] { color: #d9e3f3; }
+.profile-pair p[lang="en"] { color: #a9b9d0; }
+.honor-year-group h3 { color: #a5a8f5; text-shadow: 0 0 22px #8a82ed25; }
+.honor-list li span { color: #dce6f6; }
+.honor-list li small { color: #a5b6cc; }
+.project-heading h3, .group-subtitle { color: #dfe8f7; }
+.project-heading > span { color: #a9bdd5; }
+.project-card, .service-card { position: relative; background: linear-gradient(120deg, #14243a, #101d31); border-color: #304460; box-shadow: inset 0 1px 0 #728cb517; }
+.project-card::before, .service-card::after { content: ""; position: absolute; top: -1px; left: -1px; width: 18px; height: 18px; border-top: 1px solid #79afc9; border-left: 1px solid #79afc9; pointer-events: none; }
+.project-meta { color: #a7b8dc; }
+.project-meta span:first-child { background: #233452; color: #a5d7ee; border: 1px solid #3b5272; }
+.project-card h4 { color: #e4ecfa; }
+.project-card .project-title { color: #cbd8ed; }
+.project-card p { color: #a8bad3; }
+.group-heading img { border-color: #526685; }
+.group-subtitle::before { background: #82cada; box-shadow: 0 0 10px #7ccada40; }
+.member-card { background: #14233a; border-color: #324862; }
+.member-info { background: #101e32; border-top-color: #324862; }
+.member-info h3 { color: #e3edfc; }
+.member-info p { color: #adbed5; }
+.member-info .member-role { color: #abb2ef; }
+.mascot-card { background: #182640; border-color: #63729c; }
+.mascot-card .member-info { background: #142038; }
+.mascot-card .member-photo { border-color: #b9c7de; }
+.pet-button { border-color: #8491c8; background: #2b3557; color: #d8dfff; }
+.pet-button:hover { background: #3b4871; }
+.service-card h3, .society-list span { color: #dce8fa; }
+.service-card h4 { color: #a4dce8; }
+.service-card p { color: #b8c7dc; }
+.society-list small { color: #a7bad2; }
+.society-list li { border-left-color: #717daf; }
+.publication-list > li { border-color: #2c405c; }
+.publication-list > li::before { color: #a8ddeb; background: #1b3048; border: 1px solid #395873; }
+.publication-list .text-blue, .publication-list .pub-title { color: #e0eafe; }
+.publication-list > li p, .publication-list .pub-authors { color: #b4c4da; }
+.publication-list .pub-details, .publication-note { color: #a3b7d1; }
+.publication-list strong { color: #d0c5ff; }
+.publication-list a { color: #8fd4e5; }
+.site-footer { background: #091221; border-color: #2c405e; }
+@media (hover: hover) {
+  .project-card:hover, .member-card:hover { border-color: #648cac; box-shadow: 0 0 24px #5f89d114; }
+  .publication-list > li:hover { background: #142239; }
+}
+@media (max-width: 620px) {
+  .hero::after { width: 100%; height: 350px; opacity: .21; }
+  .content-section::before { width: 180px; opacity: .09; }
 }
 
 @media (max-width: 1100px) {
