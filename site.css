@@ -181,7 +181,8 @@ img { max-width: 100%; }
 .button-primary:hover { background: #7575c8; color: #fff; }
 .button-outline { background: #14243b; color: #d0e8f6; border-color: #507084; }
 .button-outline:hover { background: #213952; color: #fff; border-color: #80d7e7; }
-.mascot-note { display: inline-flex; gap: 8px; align-items: center; padding: 4px 8px; color: #b9c8dc; font-size: 11px; font-weight: 500; }
+.mascot-note { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 44px; width: 44px; height: 44px; padding: 6px; border: 0; background: transparent; cursor: pointer; touch-action: manipulation; position: relative; z-index: 3; }
+.mascot-note:focus-visible { outline: 2px solid #91d6ed; outline-offset: 3px; border-radius: 50%; }
 .mascot-note:hover { color: #e9faff; }
 .mascot-note img { width: 32px; height: 32px; object-fit: cover; object-position: center 24%; border: 1px solid #8b9bb1; border-radius: 50%; }
 .portrait-wrap { position: relative; padding: 9px 9px 12px; background: #152338; border: 1px solid #4b5d79; border-radius: 3px; box-shadow: 0 12px 36px #030b1640; transform: none; }
@@ -349,7 +350,7 @@ main { counter-reset: research-section; }
   .hero-affiliation { grid-column: 1 / -1; grid-row: 4; margin-top: 20px; padding-top: 15px; }
   .hero-actions { grid-column: 1 / -1; grid-row: 5; margin-top: 18px; gap: 12px; }
   .hero-actions .button { padding: 8px 10px; font-size: 11px; }
-  .mascot-note { padding-left: 0; }
+  .mascot-note { padding: 6px; }
   .hero-tracks { grid-template-columns: 1fr; gap: 15px; }
   .hero-overview { padding: 19px 14px 24px; }
   .honor-year-group { grid-template-columns: 1fr; gap: 12px; }

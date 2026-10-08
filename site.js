@@ -27,6 +27,31 @@ const navLinks = [...navigation.querySelectorAll('a')];
 const petButton = document.querySelector('.pet-button');
 const petReply = document.querySelector('.pet-reply');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const secretCat = document.querySelector('.mascot-note');
+if (secretCat) {
+  let escapeAnimation;
+  let hops = 0;
+  const stopEscape = () => escapeAnimation?.cancel();
+  secretCat.addEventListener('click', event => {
+    stopEscape();
+    if (reducedMotion.matches) return;
+    const bounds = secretCat.getBoundingClientRect();
+    const direction = ++hops % 2 ? 1 : -1;
+    // Keep the whole hit target inside the viewport, including narrow phones.
+    const dx = event.detail === 0 ? 0 : Math.max(8 - bounds.left, Math.min(direction * (48 + Math.random() * 40), document.documentElement.clientWidth - bounds.right - 8));
+    const dy = -Math.min(36, Math.max(0, bounds.top - 90));
+    escapeAnimation = secretCat.animate([
+      { transform: 'translate(0, 0) rotate(0deg)' },
+      { transform: `translate(${dx * .5}px, ${dy - 12}px) rotate(${direction * -14}deg)`, offset: .18 },
+      { transform: `translate(${dx}px, ${dy}px) rotate(${direction * 8}deg)`, offset: .34 },
+      { transform: `translate(${dx}px, ${dy}px) rotate(0deg)`, offset: .62 },
+      { transform: 'translate(0, -8px) rotate(-6deg)', offset: .88 },
+      { transform: 'translate(0, 0) rotate(0deg)' }
+    ], { duration: 1250, easing: 'ease-in-out' });
+  });
+  window.addEventListener('resize', stopEscape);
+  reducedMotion.addEventListener('change', stopEscape);
+}
 if (petButton && petReply) {
   const replies = ['喵，收到你的摸摸啦。', '伸个懒腰，再想一个好问题。', '今天也要保持好奇心。', '论文可以慢慢读，猫可以再摸一下。'];
   let petCount = 0;
