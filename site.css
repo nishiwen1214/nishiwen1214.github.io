@@ -368,7 +368,32 @@ main { counter-reset: research-section; }
   .group-heading img { width: 48px; height: 48px; }
   .group-heading { gap: 11px; }
 }
+.interactive-panel { position: relative; isolation: isolate; }
+.panel-light { position: absolute; inset: 0; z-index: 2; overflow: hidden; border-radius: inherit; pointer-events: none; opacity: 0; background: radial-gradient(280px circle at var(--pointer-x, 50%) var(--pointer-y, 50%), #81dfff16, transparent 75%); }
+.panel-light::after { content: ""; position: absolute; inset: 0; background: linear-gradient(110deg, transparent 35%, #99dfff13 48%, #c7e7ff22 50%, transparent 65%); transform: translateX(-130%); }
+.pet-spark { position: absolute; z-index: 3; top: 100px; left: 50%; color: #d2c6ff; font-size: 30px; text-shadow: 0 0 15px #98beff; pointer-events: none; }
+.interactive-panel:focus-within { outline: 1px solid #90c5df; outline-offset: 2px; }
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .interactive-panel { transition: transform .24s ease-out, border-color .25s, box-shadow .25s; }
+  .interactive-panel.is-tracking { transform: perspective(1000px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg)) translateY(-3px); border-color: #71b9d2; box-shadow: 0 8px 28px #020a1840, 0 0 20px #78b3ff16; }
+  .panel-light { transition: opacity .25s; }
+  .interactive-panel:hover .panel-light { opacity: 1; }
+  .interactive-panel:hover .panel-light::after { transform: translateX(130%); transition: transform 1s ease-out; }
+  .button, .pet-button { transition: transform .2s, box-shadow .2s, background .2s, border-color .2s; }
+  .button:hover, .pet-button:hover { transform: translateY(-2px); box-shadow: 0 0 22px #8cbcff30, inset 0 0 12px #b1e4ff0d; }
+  .button:active, .pet-button:active { transform: translateY(0); }
+  .site-nav a { transition: color .2s, border-color .2s, background .2s, text-shadow .2s; }
+  .site-nav a:hover { text-shadow: 0 0 12px #8bd9e9a0; }
+  .publication-list > li { transition: background .2s, padding-left .2s; }
+  .publication-list > li:hover { padding-left: 48px; }
+  .publication-list a { transition: color .2s, text-shadow .2s; }
+  .publication-list a:hover { text-shadow: 0 0 10px #7ddcff70; }
+  .mascot-note img { transition: transform .3s, box-shadow .3s; }
+  .mascot-note:hover img { transform: rotate(-10deg) scale(1.12); box-shadow: 0 0 15px #a9acff60; }
+  .hero:hover::after { animation: neural-drift 8s ease-in-out infinite alternate; }
+}
+@keyframes neural-drift { from { transform: translateY(0) rotate(0deg); } to { transform: translateY(9px) rotate(3deg); } }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  *, *::before, *::after { transition-duration: 0.01ms !important; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation: none !important; }
 }
