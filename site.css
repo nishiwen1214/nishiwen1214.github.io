@@ -113,6 +113,7 @@ img { max-width: 100%; }
 .member-card { overflow: hidden; min-width: 0; border: 1px solid var(--line); background: #fff; }
 .member-photo { display: block; width: 150px; height: 180px; margin: 18px auto 0; background-image: url("images/suat-nlp-members-original.png"); background-size: 2059.5px 622.5px; background-repeat: no-repeat; background-color: #fff; }
 .member-photo-image { object-fit: cover; object-position: center 12%; background-image: none; }
+.member-photo[role="img"] { background-size: calc(2059.5px * var(--photo-zoom, 1)) calc(622.5px * var(--photo-zoom, 1)); background-position: calc(-1 * var(--photo-x, 0px) * var(--photo-zoom, 1)) calc(-1 * var(--photo-y, 0px) * var(--photo-zoom, 1)); }
 .member-info { min-height: 134px; padding: 14px 17px 18px; border-top: 1px solid #eee9ee; }
 .member-info h3 { margin: 0 0 5px; color: #342b35; font-size: 15px; line-height: 1.4; }
 .member-info p { margin: 5px 0 0; color: #746b75; font-size: 11.5px; line-height: 1.6; }
